@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grace & Glow Bookshelf</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+  <script src="index.js" defer></script>
+</head>
+
+<body>
+  <section id="landing">
+    <nav>
+      <div class="nav__container">
+        <a class="brand" href="index.html" aria-label="Grace and Glow Bookshelf home">
+          <span class="brand__icon"><i class="fas fa-book-open"></i></span>
+          <span class="brand__text">Grace & Glow Bookshelf</span>
+        </a>
+        <ul class="nav__links">
+          <li><a href="index.html" class="nav__link">Home</a></li>
+          <li><a href="#highlights" class="nav__link">Purpose</a></li>
+          <li><a href="books.html" class="nav__link nav__link--primary">Books</a></li>
+        </ul>
+        <button class="btn__menu" onclick="openMenu()" aria-label="Open menu">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="menu__backdrop">
+          <button class="btn__menu btn__menu--close" onclick="closeMenu()" aria-label="Close menu">
+            <i class="fas fa-times"></i>
+          </button>
+          <ul class="menu__links">
+            <li class="menu__list"><a href="index.html" class="menu__link" onclick="closeMenu()">Home</a></li>
+            <li class="menu__list"><a href="#highlights" class="menu__link" onclick="closeMenu()">Purpose</a></li>
+            <li class="menu__list"><a href="books.html" class="menu__link" onclick="closeMenu()">Books</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header>
+      <div class="header__container">
+        <div class="header__description">
+          <p class="eyebrow">A cozy little shelf for growth, courage, and creativity</p>
+          <h1>Find the book that helps your next chapter glow.</h1>
+          <h2>Curated with purpose by <span class="purple">Mindy</span></h2>
+          <a href="books.html"><button class="btn">Browse the bookshelf</button></a>
+        </div>
+        <figure class="header__img--wrapper">
+          <img src="assets/Undraw_Books.svg" alt="A woman reading beside a stack of books">
+        </figure>
+      </div>
+    </header>
+  </section>
+
+  <main>
+    <section id="highlights">
+      <div class="container">
+        <div class="row">
+          <h2 class="section__title">Why choose <span class="purple">this shelf</span></h2>
+          <div class="highlight__wrapper">
+            <div class="highlight">
+              <div class="highlight__img highlight__img--emoji" aria-hidden="true">✨</div>
+              <h3 class="highlight__subtitle">Purposeful Picks</h3>
+              <p class="highlight__para">Books chosen for building confidence, focus, discipline, and a stronger mindset.</p>
+            </div>
+            <div class="highlight">
+              <div class="highlight__img highlight__img--emoji" aria-hidden="true">💜</div>
+              <h3 class="highlight__subtitle">Warm & Encouraging</h3>
+              <p class="highlight__para">A library experience that feels inviting, personal, and easy to explore.</p>
+            </div>
+            <div class="highlight">
+              <div class="highlight__img highlight__img--emoji" aria-hidden="true">💻</div>
+              <h3 class="highlight__subtitle">Built With JavaScript</h3>
+              <p class="highlight__para">The books page uses JavaScript to render books, show ratings, and sort your collection.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="container">
+        <div class="row">
+          <h2 class="section__title">Featured <span class="purple">Favorites</span></h2>
+          <div class="books">
+            <div class="book">
+              <figure class="book__img--wrapper"><img class="book__img" src="assets/crack the coding interview.png" alt="Crack the Coding Interview book cover"></figure>
+              <div class="book__title">Crack the Coding Interview</div>
+              <div class="book__note">For sharpening the developer mind.</div>
+              <div class="book__ratings"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+              <div class="book__price"><span class="book__price--normal">$49.95</span> $14.95</div>
+            </div>
+            <div class="book">
+              <figure class="book__img--wrapper"><img class="book__img" src="assets/atomic habits.jpg" alt="Atomic Habits book cover"></figure>
+              <div class="book__title">Atomic Habits</div>
+              <div class="book__note">For steady, faithful growth.</div>
+              <div class="book__ratings"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+              <div class="book__price">$39.00</div>
+            </div>
+            <div class="book">
+              <figure class="book__img--wrapper"><img class="book__img" src="assets/david goggins.jpeg" alt="Can't Hurt Me book cover"></figure>
+              <div class="book__title">Can't Hurt Me</div>
+              <div class="book__note">For courage when life gets heavy.</div>
+              <div class="book__ratings"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+              <div class="book__price"><span class="book__price--normal">$59.95</span> $14.95</div>
+            </div>
+            <div class="book">
+              <figure class="book__img--wrapper"><img class="book__img" src="assets/deep work.jpeg" alt="Deep Work book cover"></figure>
+              <div class="book__title">Deep Work</div>
+              <div class="book__note">For focus, study, and quiet discipline.</div>
+              <div class="book__ratings"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+              <div class="book__price"><span class="book__price--normal">$29.00</span> $12.00</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="explore">
+      <div class="container">
+        <div class="row row__column">
+          <p class="eyebrow">Keep growing, keep glowing</p>
+          <h2>Explore all <span class="purple">Books</span></h2>
+          <a href="books.html"><button class="btn">See all books</button></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="row row__column">
+        <a class="footer__brand" href="index.html">Grace & Glow Bookshelf</a>
+        <div class="footer__list">
+          <a href="index.html" class="footer__link">Home</a>
+          <a href="#highlights" class="footer__link">Purpose</a>
+          <a href="books.html" class="footer__link">Books</a>
+        </div>
+        <div class="footer__copyright">Copyright &copy; 2026 Grace & Glow Bookshelf</div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Books | Grace & Glow Bookshelf</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+  <script src="index.js" defer></script>
+  <script src="books.js" defer></script>
+</head>
+
+<body id="books__body">
+  <section>
+    <nav>
+      <div class="nav__container">
+        <a class="brand" href="index.html" aria-label="Grace and Glow Bookshelf home">
+          <span class="brand__icon"><i class="fas fa-book-open"></i></span>
+          <span class="brand__text">Grace & Glow Bookshelf</span>
+        </a>
+        <ul class="nav__links">
+          <li><a href="index.html" class="nav__link">Home</a></li>
+          <li><a href="index.html#highlights" class="nav__link">Purpose</a></li>
+          <li><a href="books.html" class="nav__link nav__link--primary">Books</a></li>
+        </ul>
+        <button class="btn__menu" onclick="openMenu()" aria-label="Open menu">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="menu__backdrop">
+          <button class="btn__menu btn__menu--close" onclick="closeMenu()" aria-label="Close menu">
+            <i class="fas fa-times"></i>
+          </button>
+          <ul class="menu__links">
+            <li class="menu__list"><a href="index.html" class="menu__link" onclick="closeMenu()">Home</a></li>
+            <li class="menu__list"><a href="index.html#highlights" class="menu__link" onclick="closeMenu()">Purpose</a></li>
+            <li class="menu__list"><a href="books.html" class="menu__link" onclick="closeMenu()">Books</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <main id="books__main">
+    <section class="books__hero">
+      <div class="container">
+        <div class="row">
+          <p class="eyebrow">The full collection</p>
+          <div class="books__header">
+            <h1 class="books__header--title">All <span class="purple">Books</span></h1>
+            <select id="filter" onchange="filterBooks(event)" aria-label="Sort books">
+              <option value="" disabled selected>Sort</option>
+              <option value="LOW_TO_HIGH">Price, Low to High</option>
+              <option value="HIGH_TO_LOW">Price, High to Low</option>
+              <option value="RATING">Rating</option>
+            </select>
+          </div>
+          <p class="books__intro">Browse books for coding, focus, courage, money wisdom, and personal growth. Use the dropdown to sort the shelf.</p>
+          <div class="books">
+            <i class="fas fa-spinner books__loading--spinner"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="row row__column">
+        <a class="footer__brand" href="index.html">Grace & Glow Bookshelf</a>
+        <div class="footer__list">
+          <a href="index.html" class="footer__link">Home</a>
+          <a href="index.html#highlights" class="footer__link">Purpose</a>
+          <a href="books.html" class="footer__link">Books</a>
+        </div>
+        <div class="footer__copyright">Copyright &copy; 2026 Grace & Glow Bookshelf</div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
